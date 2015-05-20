@@ -17,6 +17,9 @@ Welcome <%= current_user.email %>!
    <p><%= blog_post.blog_entry[0..500] %>...[<%=
        link_to "READ MORE" , blog_post %>]</p>
 </div>
+    <div class="panel-body">
+   by <strong><%= blog_post.user.username %></strong>
+    
    <div class="panel-footer">
        <%= link_to 'Edit', edit_blog_post_path(blog_post), class: "btn btn-warning" %>
        <%= link_to 'Destroy', blog_post, method: :delete, data: {confirm: 'Are you sure?' }, class: "btn btn-danger" %>

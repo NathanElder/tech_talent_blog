@@ -9,6 +9,10 @@
         <p><%= @blog_post.blog_entry %></p>
 	</div>
 </div>
+
+<div class="panel-body">
+  <p>by <strong><%= @blog_post.user.username %></strong> 
+      
 <div class="panel panel-success">
 	<div class="panel-heading">
 		Make a Comment
@@ -26,6 +30,10 @@
     <div class="panel-body">
       <p><strong><%= comment.user.email %></strong> said:</p>
       </div>
+      
+       <div class="panel-body">
+      <p><strong><%= comment.user.username %></strong> said:</p>
+           
         <% end %>
         <p>
             
